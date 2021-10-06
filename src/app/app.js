@@ -2,7 +2,8 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import './app.scss';
-import Game from './game';
+import Game from '../game/game';
+import Home from '../home/home';
 
 export default function App() {
     return (
@@ -31,8 +32,4 @@ export default function App() {
             </Container>
         </BrowserRouter>
     );
-}
-
-function Home() {
-    return <h2>Home</h2>;
 }
