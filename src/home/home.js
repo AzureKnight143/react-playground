@@ -30,7 +30,7 @@ export default class Home extends React.Component {
     return (
       <div className="home">
         <h2>Home</h2>
-        <Form noValidate validated={this.state.validated} onSubmit={this.handleSubmit}>
+        <Form name="login" noValidate validated={this.state.validated} onSubmit={this.handleSubmit}>
           <Form.Group className="mb-3" controlId="email">
             <Form.Label>Email</Form.Label>
             <Form.Control type="email" placeholder="Enter Email" required value={this.state.email} onChange={this.handleChange} />

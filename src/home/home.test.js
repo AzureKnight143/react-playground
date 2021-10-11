@@ -1,9 +1,8 @@
 import { screen, render, fireEvent } from "@testing-library/react";
 import Home from "./home";
 
-let container;
 beforeEach(() => {
-  ({ container } = render(<Home />));
+  render(<Home />);
 });
 
 it("has a title", () => {
@@ -33,7 +32,7 @@ describe("Name of the group", () => {
     fireEvent.click(screen.getByRole("button", { type: "submit" }));
 
     expect(alert).toHaveBeenCalledWith(email + " " + password);
-    expect(container.querySelector("form.was-validated")).toBeInTheDocument();
+    expect(screen.getByRole("form")).toHaveClass("was-validated");
   });
 
   it("handles invalid form submit ", () => {
@@ -46,6 +45,6 @@ describe("Name of the group", () => {
     fireEvent.click(screen.getByRole("button", { type: "submit" }));
 
     expect(alert).not.toHaveBeenCalled();
-    expect(container.querySelector("form.was-validated")).toBeInTheDocument();
+    expect(screen.getByRole("form")).toHaveClass("was-validated");
   });
 });
