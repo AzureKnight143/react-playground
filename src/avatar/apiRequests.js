@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-export default function GetRequest(props) {
+export function GetRequest(props) {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);

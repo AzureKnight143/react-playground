@@ -1,0 +1,9 @@
+.avatar {
+  .characters {
+    display: flex;
+    flex-wrap: wrap;
+    .character {
+      width: 200px;
+    }
+  }
+}
